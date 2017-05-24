@@ -1,0 +1,8 @@
+Dockerとは
+「http://qiita.com/tigberd/items/b94ae2bf7d78685cd6f5」
+Dockerが使われる動機
+「http://qiita.com/NewGyu/items/d0b0d6074e13acd51f3e」
+Dockerの説明※大分かみ砕いている
+「http://qiita.com/Seisan0044/items/cd91eaeaeb4cd2fa3629」
+Dockerの使い方※一部コマンド記載
+「http://paiza.hatenablog.com/entry/docker_intro#features」
