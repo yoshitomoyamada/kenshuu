@@ -1,4 +1,4 @@
-package src.main.java;
+﻿package src.main.java;
 
 public class Question2 {
 
@@ -91,3 +91,4 @@ public class Question2 {
 	}
 
 }
+//test
