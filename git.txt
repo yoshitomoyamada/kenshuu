@@ -1,0 +1,58 @@
+git add ファイル名
+既存のファイルをgitで管理する
+
+git：バージョン管理システム
+英語だが、ドキュメントが豊富
+Linuxコマンド・VIMを使う
+
+ファイルの操作を履歴データベースに保存
+
+git log
+commit xxxxxxxxxxxxxxxxxxxxxxxx：一意なID
+Author　ユーザー
+Date　日時
+git log --oneline
+ID user date
+
+git log -pp
+id
+user
+date
+変更箇所
+
+git log --stat
+
+変更されたファイル・箇所
+
+git status
+作業内容(ファイル作成、変更、削除)
+を記録していてなにを行ったか確認できて
+コミットすると情報が更新される
+
+git diff --cached
+差分の確認(ファイルの変更箇所を確認できる)
+
+git add .
+変更のあるファイルを全てaddする
+
+gitで管理されているファイルは削除時は
+git rm or mvでファイルを操作する
+
+git管理ファイル
+gitignore：その階層とサブディレクトリに影響する
+指定ファイルを無視する
+*.log(.log拡張子のファイルは無視する)
+
+git commit -a(--amend)
+コミット内容を変更する
+
+git branch 名前
+ブランチ作成
+
+git checkout 名前
+
+masterに反映
+git merge ブランチ名
+
+ブランチ削除
+git branch -d ブランチ名
