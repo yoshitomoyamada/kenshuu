@@ -1,14 +1,61 @@
 package jp.cp.tafs.lesson;
 
+import java.util.Scanner;
+
 public class IamGamePlayer {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		//ToDo ã‚²ãƒ¼ãƒ ã‚½ãƒ•ãƒˆã§éŠã³ã¾ã—ã‚‡ã†ã€‚
-		SuperGameMachine Play = new SuperGameMachine(null, null, null, null, null);
-		SuperGameMachine Playing = new SuperGameMachine("Nintendo64", "ä»»å¤©å ‚", "æœ‰ã‚Š", "2000/04/17", "25,000");
+		//ToDo ƒQ[ƒ€‹@‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Ìì¬
+		SuperGameMachine machine = new SuperGameMachine();
 
-		System.out.println(Play.Play());
-		System.out.println(Playing.Playing());
+		//ToDo ƒQ[ƒ€ƒ\ƒtƒg‚Å—V‚Ñ‚Ü‚µ‚å‚¤B
+
+		machine.INSERT_GameSoft("ƒTƒNƒ‰‘åí");
+		machine.PowerOn();
+		machine.Playing();
+
+		// ƒeƒXƒg—p
+		//		machine.PowerOn();
+		//		machine.PowerOff();
+
+		machine.Power_Supply();
+
+		machine.TAKE_OUT_GameSoft();
+		//		machine.INSERT_GameSoft("ƒTƒNƒ‰‘åí");
+		machine.INSERT_GameSoft("ƒNƒƒmƒgƒŠƒK[");
+		//		machine.TAKE_OUT_GameSoft();
+		//		machine.TAKE_OUT_GameSoft();
+
+		System.out.println("\n");
+
+		//ToDo “dŒ¹‚ª“ü‚Á‚Ä‚¢‚Ü‚·‚©	
+
+		if (machine.getisPowerOn() == false) {
+			System.out.println("“dŒ¹‚ª—‚¿‚Ä‚¢‚Ü‚·B");
+			machine.PowerOn();
+		}
+
+		if (machine.Active == false) {
+
+			System.out.println("ƒ\ƒtƒg‚ğ‘I‘ğ‚µ‚Ü‚·B");
+			Scanner scan_1 = new Scanner(System.in);
+			String soft = scan_1.next();
+			System.out.println(soft);
+			machine.INSERT_GameSoft(soft);
+			machine.Playing();
+		}
+
+		// —V‚Ñ‚Ü‚¹‚¤
+		machine.Playing();
+
+		// Š´‘z
+		System.out.println("\n");
+		System.out.println("Š´‘z‚ğ•·‚©‚¹‚Ä‚­‚¾‚³‚¢\n");
+
+		Scanner scan_2 = new Scanner(System.in);
+		String comment = scan_2.next();
+		System.out.println("u" + comment + "v");
+
+		System.out.println(machine.getMaker());
 	}
-
 }
